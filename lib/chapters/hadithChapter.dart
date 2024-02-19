@@ -1,4 +1,4 @@
-import 'package:al_hadith_clone/theme/theme.dart';
+import 'package:al_hadith/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 import '../hadith_details_page/hadisDetalis.dart';
