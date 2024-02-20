@@ -58,7 +58,7 @@ class HomePage extends StatelessWidget {
               ),
 
               // -----------slider------------
-
+              MyImageSlider(texts: texts),
 
 
               // -----------slider------------
