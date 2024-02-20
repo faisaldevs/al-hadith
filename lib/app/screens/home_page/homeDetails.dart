@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../slider/slider.dart';
+import 'components/body_icons.dart';
 
 class HomeDetails extends StatelessWidget {
   HomeDetails({super.key});
@@ -26,9 +27,9 @@ class HomeDetails extends StatelessWidget {
               // -----------slider------------
               MyImageSlider(texts: texts),
 
-
               // -----------slider------------
-
+              const SizedBox(height: 20,),
+              const BodyIcons(),
             ],
           ),
         ),
@@ -37,14 +38,6 @@ class HomeDetails extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
 
 //Container(
 //         width: MediaQuery.of(context).size.width,

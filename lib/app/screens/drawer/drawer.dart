@@ -3,13 +3,13 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 import '../home_page/homeDetails.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
+
 final _advancedDrawerController = AdvancedDrawerController();
 
 class _HomePageState extends State<HomePage> {
@@ -44,44 +44,6 @@ class _HomePageState extends State<HomePage> {
         //   ),
         // ],
         borderRadius: const BorderRadius.all(Radius.circular(16)),
-      ),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text('Al-Hadith'),
-          centerTitle: true,
-          leading: IconButton(
-            onPressed: _handleMenuButtonPressed,
-            icon: ValueListenableBuilder<AdvancedDrawerValue>(
-              valueListenable: _advancedDrawerController,
-              builder: (_, value, __) {
-                return AnimatedSwitcher(
-                  duration: Duration(milliseconds: 250),
-                  child: Icon(
-                    value.visible ? Icons.clear : Icons.menu,
-                    key: ValueKey<bool>(value.visible),
-                  ),
-                );
-              },
-            ),
-          ),
-          actions: [
-            IconButton(
-                style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-                  foregroundColor: MaterialStatePropertyAll(Colors.transparent),
-                  overlayColor: MaterialStatePropertyAll(Colors.transparent),
-                ),
-                onPressed: () {
-                  // Get.toNamed(notificationPage);
-                },
-                icon: const Icon(
-                  Icons.search,
-                  color: Colors.red,
-                  size: 28,
-                )),
-          ],
-        ),
-        body: HomeDetails(),
       ),
       drawer: SafeArea(
         child: Container(
@@ -145,8 +107,49 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.cyan,
+          elevation: 0,
+          title: const Text('Al-Hadith'),
+          centerTitle: true,
+          leading: IconButton(
+            onPressed: _handleMenuButtonPressed,
+            icon: ValueListenableBuilder<AdvancedDrawerValue>(
+              valueListenable: _advancedDrawerController,
+              builder: (_, value, __) {
+                return AnimatedSwitcher(
+                  duration: Duration(milliseconds: 250),
+                  child: Icon(
+                    value.visible ? Icons.clear : Icons.menu,
+                    key: ValueKey<bool>(value.visible),
+                  ),
+                );
+              },
+            ),
+          ),
+          actions: [
+            IconButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  foregroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  overlayColor: MaterialStatePropertyAll(Colors.transparent),
+                ),
+                onPressed: () {
+                  // Get.toNamed(notificationPage);
+                },
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.red,
+                  size: 28,
+                )),
+          ],
+        ),
+        body: HomeDetails(),
+      ),
     );
   }
+
   void _handleMenuButtonPressed() {
     // NOTICE: Manage Advanced Drawer state through the Controller.
     // _advancedDrawerController.value = AdvancedDrawerValue.visible();
