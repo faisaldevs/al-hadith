@@ -1,5 +1,6 @@
-import 'package:al_hadith/theme/theme.dart';
 import 'package:flutter/material.dart';
+
+import '../../theme/app_colors.dart';
 
 class HadithDetalis extends StatelessWidget {
   final String item2;
@@ -16,13 +17,11 @@ class HadithDetalis extends StatelessWidget {
           children: [
             AppBar(
               backgroundColor: AppColors.primaryColor,
-              title: Text("bukhari"),
+              title: const Text("bukhari"),
             ),
             Container(
-              child: Column(
-                children: [
-
-                ],
+              child: const Column(
+                children: [],
               ),
             )
           ],
