@@ -57,11 +57,17 @@ class HomePage extends StatelessWidget {
                 ),
               ),
 
+              // -----------slider------------
+
+
+
+              // -----------slider------------
+
             ],
           ),
         ),
       ),
-      drawer:  DrawerUi(),
+      // drawer:  DrawerUi(),
     );
   }
 }
