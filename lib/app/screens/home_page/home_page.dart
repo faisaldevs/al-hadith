@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import '../../theme/app_colors.dart';
-import '../chapters/hadithChapter.dart';
-import '../drawer/drawer.dart';
 import '../slider/slider.dart';
 
-class HomePage extends StatelessWidget {
-  HomePage({super.key});
+class HomeDetails extends StatelessWidget {
+  HomeDetails({super.key});
 
   final List<String> texts = [
     'সে-ই মুসলিম, যার জিহ্বা ও হাত থেকে অন্য মুসলিম নিরাপদ থাকে।',
@@ -27,36 +23,6 @@ class HomePage extends StatelessWidget {
           color: Colors.cyan,
           child: Column(
             children: [
-              Container(
-                padding: const EdgeInsets.only(top: 5),
-                child: AppBar(
-                  systemOverlayStyle: const SystemUiOverlayStyle(
-                    statusBarColor: AppColors.primaryColor,
-
-                  ),
-                  backgroundColor: Colors.transparent,
-                  elevation: 0,
-                  title: const Text("Al- Hadith"),
-                  centerTitle: true,
-                  actions: [
-                    IconButton(
-                      style: const ButtonStyle(
-                        backgroundColor: MaterialStatePropertyAll(Colors.transparent),
-                        foregroundColor: MaterialStatePropertyAll(Colors.transparent),
-                        overlayColor: MaterialStatePropertyAll(Colors.transparent),
-                      ),
-                        onPressed: () {
-                          // Get.toNamed(notificationPage);
-                        },
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.red,
-                          size: 28,
-                        )),
-                  ],
-                ),
-              ),
-
               // -----------slider------------
               MyImageSlider(texts: texts),
 

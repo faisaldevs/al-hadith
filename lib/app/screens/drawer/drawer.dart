@@ -4,15 +4,15 @@ import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import '../home_page/home_page.dart';
 
 
-class DrawerUi extends StatefulWidget {
-  const DrawerUi({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<DrawerUi> createState() => _DrawerUiState();
+  State<HomePage> createState() => _HomePageState();
 }
 final _advancedDrawerController = AdvancedDrawerController();
 
-class _DrawerUiState extends State<DrawerUi> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return AdvancedDrawer(
@@ -47,7 +47,8 @@ class _DrawerUiState extends State<DrawerUi> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Advanced Drawer Example'),
+          title: const Text('Al-Hadith'),
+          centerTitle: true,
           leading: IconButton(
             onPressed: _handleMenuButtonPressed,
             icon: ValueListenableBuilder<AdvancedDrawerValue>(
@@ -63,8 +64,24 @@ class _DrawerUiState extends State<DrawerUi> {
               },
             ),
           ),
+          actions: [
+            IconButton(
+                style: const ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  foregroundColor: MaterialStatePropertyAll(Colors.transparent),
+                  overlayColor: MaterialStatePropertyAll(Colors.transparent),
+                ),
+                onPressed: () {
+                  // Get.toNamed(notificationPage);
+                },
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.red,
+                  size: 28,
+                )),
+          ],
         ),
-        body: HomePage(),
+        body: HomeDetails(),
       ),
       drawer: SafeArea(
         child: Container(

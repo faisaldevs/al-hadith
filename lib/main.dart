@@ -1,6 +1,7 @@
+import 'package:al_hadith/app/screens/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'app/screens/home_page/home_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DrawerUi(),
+      home: HomePage(),
     );
   }
 }
