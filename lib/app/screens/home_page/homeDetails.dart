@@ -19,56 +19,102 @@ class HomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(children: [
-            Container(
-              height: Get.height * .3,
-              width: Get.width,
-              color: Colors.cyan,
-              child: Column(
-                children: [
-                  // -----------slider------------
-                  MyImageSlider(texts: texts),
+        child: Container(
+          height: Get.height,
+          width: Get.width,
+          child: Column(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Container(
+                  height: Get.height * .3,
+                  width: Get.width,
+                  color: Colors.cyan,
+                  child: Column(
+                    children: [
+                      // -----------slider------------
+                      MyImageSlider(texts: texts),
 
-                  // -----------slider------------
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  const BodyIcons(),
-                ],
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Colors.white60,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40),
-                      topRight: Radius.circular(40)),
-                ),
-                height: Get.height * .6,
-                width: Get.width,
-                child: Column(
-                  children: [
-                    const Text("সব হাদিসের বই"),
-                    Container(
-                      margin: EdgeInsets.all(8),
-                      width: Get.width,
-                      child: ListView.builder(
-                        // scrollDirection: Axis.vertical,
-                        shrinkWrap: true,
-                        itemCount: 70,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Container(child: const HomeListTile(),margin: EdgeInsets.only(bottom: 10),);
-                        },
+                      // -----------slider------------
+                      const SizedBox(
+                        height: 20,
                       ),
-                    ),
-                  ],
+                      const BodyIcons(),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ]),
+              Expanded(
+                flex: 4,
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white60,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(40),
+                        topRight: Radius.circular(40)),
+                  ),
+                  height: Get.height * .6,
+                  width: Get.width,
+                  // padding: EdgeInsets.only(top: 10),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        width: 25,
+                        child: Divider(
+                          height: 10,
+                          thickness: 4,
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(16),
+                        child: const Align(
+                          alignment: FractionalOffset.topLeft,
+                          child: Text(
+                            "সব হাদিসের বই",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(
+                        child: ListView.builder(
+                          // // scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          itemCount: 40,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              margin: const EdgeInsets.only(bottom: 10),
+                              child: const HomeListTile(),
+                            );
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  // SingleChildScrollView(
+                  //   child: Column(
+                  //     children: [
+                  //       // const Text("সব হাদিসের বই"),
+                  //       ListView.builder(
+                  //         // // scrollDirection: Axis.vertical,
+                  //         shrinkWrap: true,
+                  //         itemCount: 40,
+                  //         itemBuilder: (BuildContext context, int index) {
+                  //           return Container(
+                  //             margin: const EdgeInsets.only(bottom: 10),
+                  //             child: const HomeListTile(),
+                  //           );
+                  //         },
+                  //       ),
+                  //     ],
+                  //   ),
+                  // ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       // drawer:  DrawerUi(),
@@ -266,36 +312,7 @@ class HomeDetails extends StatelessWidget {
 //             const SizedBox(
 //               height: 10,
 //             ),
-//             Expanded(
-//               child: ListView.builder(
-//                 itemCount: items.length,
-//                 itemBuilder: (context, index) {
-//                   return Card(
-//                     child: ListTile(
-//                       onTap: () {
-//                         Navigator.push(
-//                             context,
-//                             MaterialPageRoute(
-//                                 builder: (context) =>
-//                                     DetailPage(item: items[index])));
-//                       },
-//                       title: const Text("bukhari"),
-//                       subtitle: const Text("imam bukhari"),
-//                       trailing: const Column(
-//                         mainAxisAlignment: MainAxisAlignment.center,
-//                         children: [
-//                           Text("2342"),
-//                           SizedBox(
-//                             height: 5,
-//                           ),
-//                           Text("hadis"),
-//                         ],
-//                       ),
-//                     ),
-//                   );
-//                 },
-//               ),
-//             ),
+//         ,
 //           ],
 //         ),
 //       )
