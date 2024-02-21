@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeListTile extends StatelessWidget {
-  const HomeListTile({super.key});
+  const HomeListTile({super.key, required this.onPressed});
+  final Function() onPressed;
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,7 @@ class HomeListTile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               )),
-          onPressed: () {},
+          onPressed: onPressed,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,

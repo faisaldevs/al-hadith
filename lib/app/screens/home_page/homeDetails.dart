@@ -39,7 +39,7 @@ class HomeDetails extends StatelessWidget {
 
                       // -----------slider------------
                       const SizedBox(
-                        height: 20,
+                        height: 45,
                       ),
                       const BodyIcons(),
                     ],
@@ -86,7 +86,7 @@ class HomeDetails extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: 40,
                           itemBuilder: (BuildContext context, int index) {
-                            return const HomeListTile();
+                            return HomeListTile(onPressed: () {  },);
                           },
                         ),
                       ),
