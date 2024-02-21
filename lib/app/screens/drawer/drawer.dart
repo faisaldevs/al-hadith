@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
 import '../../theme/app_colors.dart';
+import '../home_page/floating_button/floating_button.dart';
 import '../home_page/homeDetails.dart';
 
 class HomePage extends StatefulWidget {
@@ -149,6 +150,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: HomeDetails(),
+        floatingActionButton: const FloatingActionBtn(),
       ),
     );
   }

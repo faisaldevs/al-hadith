@@ -117,6 +117,7 @@ class HomeDetails extends StatelessWidget {
         ),
       ),
       // drawer:  DrawerUi(),
+      // floatingActionButton: FloatingActionButton(onPressed: (){}),
     );
   }
 }

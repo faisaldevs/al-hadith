@@ -6,4 +6,9 @@ class ImageLink{
 
 
   static String listTile= "assets/listTile.png";
+
+  static String navIcon1 = "assets/action_icons/home.png";
+  static String navIcon2 = "assets/action_icons/2.png";
+  static String navIcon3 = "assets/action_icons/3.png";
+  static String navIcon4 = "assets/action_icons/4.png";
 }
