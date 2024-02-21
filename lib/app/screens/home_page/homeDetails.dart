@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../slider/slider.dart';
 import 'components/body_icons.dart';
+import 'components/home_list_tile.dart';
 
 class HomeDetails extends StatelessWidget {
   HomeDetails({super.key});
@@ -18,20 +19,56 @@ class HomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          height: Get.height,
-          width: Get.width,
-          color: Colors.cyan,
-          child: Column(
-            children: [
-              // -----------slider------------
-              MyImageSlider(texts: texts),
+        child: SingleChildScrollView(
+          child: Column(children: [
+            Container(
+              height: Get.height * .3,
+              width: Get.width,
+              color: Colors.cyan,
+              child: Column(
+                children: [
+                  // -----------slider------------
+                  MyImageSlider(texts: texts),
 
-              // -----------slider------------
-              const SizedBox(height: 20,),
-              const BodyIcons(),
-            ],
-          ),
+                  // -----------slider------------
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const BodyIcons(),
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.white60,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40)),
+                ),
+                height: Get.height * .6,
+                width: Get.width,
+                child: Column(
+                  children: [
+                    const Text("সব হাদিসের বই"),
+                    Container(
+                      margin: EdgeInsets.all(8),
+                      width: Get.width,
+                      child: ListView.builder(
+                        // scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemCount: 70,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Container(child: const HomeListTile(),margin: EdgeInsets.only(bottom: 10),);
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ]),
         ),
       ),
       // drawer:  DrawerUi(),
