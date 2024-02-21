@@ -8,9 +8,10 @@ class HomeListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16),
+      // margin: const EdgeInsets.symmetric(horizontal: 16),
+      margin: const EdgeInsets.only(bottom: 10, left: 16, right: 16),
       padding: const EdgeInsets.all(8),
-      width: Get.width,
+      width: Get.width * .8, // --------width----------
       height: 70,
       decoration: BoxDecoration(
         color: Colors.blue[100],
@@ -21,14 +22,14 @@ class HomeListTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            width: Get.width * .6,
+            // width: Get.width * .6,
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
 
               children: [
                 Container(
-                  width: Get.width * .25,
+                  // width: Get.width * .25,
                   height: Get.height,
                   margin: const EdgeInsets.only(right: 20),
                   child: CircleAvatar(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 
+import '../../theme/app_colors.dart';
 import '../home_page/homeDetails.dart';
 
 class HomePage extends StatefulWidget {
@@ -66,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/flutter_logo.png',
+                    'assets/listTile.png',
                   ),
                 ),
                 ListTile(
@@ -109,9 +110,9 @@ class _HomePageState extends State<HomePage> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.cyan,
+          backgroundColor: AppColors.primaryColor,
           elevation: 0,
-          title: const Text('Al-Hadith'),
+          title: const Text('Al-Hadith',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 30),),
           centerTitle: true,
           leading: IconButton(
             onPressed: _handleMenuButtonPressed,
@@ -119,10 +120,11 @@ class _HomePageState extends State<HomePage> {
               valueListenable: _advancedDrawerController,
               builder: (_, value, __) {
                 return AnimatedSwitcher(
-                  duration: Duration(milliseconds: 250),
+                  duration: const Duration(milliseconds: 250),
                   child: Icon(
                     value.visible ? Icons.clear : Icons.menu,
                     key: ValueKey<bool>(value.visible),
+                    color: Colors.white,
                   ),
                 );
               },
@@ -131,6 +133,7 @@ class _HomePageState extends State<HomePage> {
           actions: [
             IconButton(
                 style: const ButtonStyle(
+
                   backgroundColor: MaterialStatePropertyAll(Colors.transparent),
                   foregroundColor: MaterialStatePropertyAll(Colors.transparent),
                   overlayColor: MaterialStatePropertyAll(Colors.transparent),
@@ -140,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                 },
                 icon: const Icon(
                   Icons.search,
-                  color: Colors.red,
+                  color: Colors.white,
                   size: 28,
                 )),
           ],

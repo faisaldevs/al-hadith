@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../theme/app_colors.dart';
 import '../slider/slider.dart';
 import 'components/body_icons.dart';
 import 'components/home_list_tile.dart';
@@ -18,18 +19,19 @@ class HomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.primaryColor,
       body: SafeArea(
         child: Container(
           height: Get.height,
           width: Get.width,
-          child: Column(
+          child: Stack(
             children: [
-              Expanded(
-                flex: 2,
+              Align(
+                alignment: Alignment.topCenter,
                 child: Container(
                   height: Get.height * .3,
                   width: Get.width,
-                  color: Colors.cyan,
+                  color: AppColors.primaryColor,
                   child: Column(
                     children: [
                       // -----------slider------------
@@ -44,17 +46,17 @@ class HomeDetails extends StatelessWidget {
                   ),
                 ),
               ),
-              Expanded(
-                flex: 4,
+              Align(
+                alignment: Alignment.bottomCenter,
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: Colors.white60,
+                    color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(40),
                         topRight: Radius.circular(40)),
                   ),
                   height: Get.height * .6,
-                  width: Get.width,
+                  width: Get.width, // --------width----------
                   // padding: EdgeInsets.only(top: 10),
                   child: Column(
                     children: [
@@ -84,10 +86,7 @@ class HomeDetails extends StatelessWidget {
                           shrinkWrap: true,
                           itemCount: 40,
                           itemBuilder: (BuildContext context, int index) {
-                            return Container(
-                              margin: const EdgeInsets.only(bottom: 10),
-                              child: const HomeListTile(),
-                            );
+                            return const HomeListTile();
                           },
                         ),
                       ),
