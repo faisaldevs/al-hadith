@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Colors.blueGrey, Colors.blueGrey.withOpacity(0.2)],
+            colors: [AppColors.primaryGreen, AppColors.transparentGrey.withOpacity(1.0)],
           ),
         ),
       ),
@@ -49,8 +49,8 @@ class _HomePageState extends State<HomePage> {
       drawer: SafeArea(
         child: Container(
           child: ListTileTheme(
-            textColor: Colors.white,
-            iconColor: Colors.white,
+            textColor: AppColors.lightBackground,
+            iconColor: AppColors.lightBackground,
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
