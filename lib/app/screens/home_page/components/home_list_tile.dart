@@ -2,7 +2,6 @@ import 'package:al_hadith/utils/assets_links.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 class HomeListTile extends StatelessWidget {
   const HomeListTile({super.key});
 
@@ -15,14 +14,13 @@ class HomeListTile extends StatelessWidget {
       height: 70,
       decoration: BoxDecoration(
         color: Colors.blue[100],
-        borderRadius: BorderRadius.all(Radius.circular(10)),
+        borderRadius: const BorderRadius.all(Radius.circular(10)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-
+          SizedBox(
             width: Get.width * .6,
             child: Row(
               // mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -30,7 +28,6 @@ class HomeListTile extends StatelessWidget {
 
               children: [
                 Container(
-
                   width: Get.width * .25,
                   height: Get.height,
                   margin: const EdgeInsets.only(right: 20),
@@ -38,30 +35,37 @@ class HomeListTile extends StatelessWidget {
                     child: Image.asset(ImageLink.listTile),
                   ),
                 ),
-
                 const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("সব হাদিসের",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18),),
-                    Text("সব হাদিসের",style: TextStyle(fontWeight: FontWeight.normal,fontSize: 14),),
+                    Text(
+                      "সব হাদিসের",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+                    ),
+                    Text(
+                      "সব হাদিসের",
+                      style: TextStyle(
+                          fontWeight: FontWeight.normal, fontSize: 14),
+                    ),
                   ],
                 ),
               ],
             ),
           ),
-
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("7542",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-              Text("হাদিস",style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
-
+              Text(
+                "7542",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
+              Text(
+                "হাদিস",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+              ),
             ],
           )
-
-
-
-
         ],
       ),
     );

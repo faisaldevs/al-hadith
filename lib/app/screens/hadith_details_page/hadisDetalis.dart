@@ -19,10 +19,8 @@ class HadithDetalis extends StatelessWidget {
               backgroundColor: AppColors.primaryColor,
               title: const Text("bukhari"),
             ),
-            Container(
-              child: const Column(
-                children: [],
-              ),
+            const Column(
+              children: [],
             )
           ],
         ),
