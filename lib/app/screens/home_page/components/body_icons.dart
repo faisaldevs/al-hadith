@@ -13,9 +13,9 @@ class BodyIcons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CustomIconButtons( imageUrl: ImageLink.bodyImage1,),
-        CustomIconButtons( imageUrl: ImageLink.bodyImage1,),
-        CustomIconButtons( imageUrl: ImageLink.bodyImage1,),
-        CustomIconButtons( imageUrl: ImageLink.bodyImage1,),
+        CustomIconButtons( imageUrl: ImageLink.bodyImage2,),
+        CustomIconButtons( imageUrl: ImageLink.bodyImage3,),
+        CustomIconButtons( imageUrl: ImageLink.bodyImage4,)
       ],
     );
   }
