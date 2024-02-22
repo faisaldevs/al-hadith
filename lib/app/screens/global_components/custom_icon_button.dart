@@ -1,3 +1,4 @@
+import 'package:al_hadith/app/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomIconButtons extends StatelessWidget {
@@ -11,8 +12,9 @@ class CustomIconButtons extends StatelessWidget {
       margin: const EdgeInsets.only(left: 10),
       // padding: const EdgeInsets.all(15),
       decoration: const BoxDecoration(
-        color: Colors.white,
+        color: AppColors.white,
         borderRadius: BorderRadius.all(Radius.circular(10)),
+
       ),
       child: ElevatedButton(
         style: ButtonStyle(
@@ -24,12 +26,16 @@ class CustomIconButtons extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
+          backgroundColor: MaterialStatePropertyAll(
+            AppColors.white
+          )
         ),
         child: Image.asset(
           imageUrl,
-          width: 30,
+          width: 35,
         ),
         onPressed: () {},
+
       ),
     );
   }

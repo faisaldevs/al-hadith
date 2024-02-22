@@ -1,11 +1,10 @@
+import 'package:al_hadith/app/theme/app_colors.dart';
 import 'package:al_hadith/utils/assets_links.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeListTile extends StatelessWidget {
-  const HomeListTile({super.key, required this.onPressed});
-  final Function() onPressed;
-
+  const HomeListTile({super.key, required Function() onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class HomeListTile extends StatelessWidget {
               // padding: MaterialStatePropertyAll(EdgeInsets.zero),
               elevation: const MaterialStatePropertyAll(0),
               backgroundColor: MaterialStatePropertyAll(
-                Colors.blue[100],
+              AppColors.primaryGreen,
               ),
               // side: MaterialStatePropertyAll(BorderSide()),
               shape: MaterialStatePropertyAll(
@@ -28,7 +27,7 @@ class HomeListTile extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               )),
-          onPressed: onPressed,
+          onPressed: () {},
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,12 +52,12 @@ class HomeListTile extends StatelessWidget {
                       children: [
                         Text(
                           "সব হাদিসের",
-                          style: TextStyle(
+                          style: TextStyle(color: AppColors.white,
                               fontWeight: FontWeight.w600, fontSize: 18),
                         ),
                         Text(
                           "সব হাদিসের",
-                          style: TextStyle(
+                          style: TextStyle(color: AppColors.white,
                               fontWeight: FontWeight.normal, fontSize: 14),
                         ),
                       ],
@@ -71,11 +70,13 @@ class HomeListTile extends StatelessWidget {
                 children: [
                   Text(
                     "7542",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: AppColors.white,fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                   Text(
                     "হাদিস",
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: AppColors.white,fontSize: 16, fontWeight: FontWeight.w500),
                   ),
                 ],
               )

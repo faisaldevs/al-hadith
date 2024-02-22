@@ -50,7 +50,7 @@ class HomeDetails extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   decoration: const BoxDecoration(
-                    color: Colors.white,
+                    color: AppColors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(40),
                         topRight: Radius.circular(40)),
@@ -84,7 +84,7 @@ class HomeDetails extends StatelessWidget {
                         child: ListView.builder(
                           // // scrollDirection: Axis.vertical,
                           shrinkWrap: true,
-                          itemCount: 40,
+                          itemCount: items.length,
                           itemBuilder: (BuildContext context, int index) {
                             return HomeListTile(onPressed: () {  },);
                           },

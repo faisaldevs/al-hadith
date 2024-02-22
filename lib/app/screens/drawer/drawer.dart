@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
+import 'package:get/get.dart';
 
 import '../../theme/app_colors.dart';
 import '../home_page/floating_button/floating_button.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [AppColors.primaryGreen, AppColors.transparentGrey.withOpacity(1.0)],
+            colors: [AppColors.primaryGreen, AppColors.primaryColor.withOpacity(1)],
           ),
         ),
       ),
@@ -55,9 +56,10 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
+                SizedBox(height: 12,),
                 Container(
-                  width: 128.0,
-                  height: 128.0,
+                  width: Get.width,
+                  height: 120.0,
                   margin: const EdgeInsets.only(
                     top: 24.0,
                     bottom: 64.0,
@@ -68,29 +70,58 @@ class _HomePageState extends State<HomePage> {
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/listTile.png',
+                    'assets/logo/logo2.png',
                   ),
                 ),
-                ListTile(
-                  onTap: () {},
-                  leading: Icon(Icons.home),
-                  title: Text('Home'),
+                // Divider(color: Colors.black,height: 5,),
+                Card(
+                  color: AppColors.primaryColor,
+                  shadowColor: Colors.black,
+                  elevation: 5,
+                  child: ListTile(
+                    onTap: () {},
+                    leading: Icon(Icons.home),
+                    title: Text('Home'),
+                  ),
                 ),
-                ListTile(
-                  onTap: () {},
-                  leading: Icon(Icons.account_circle_rounded),
-                  title: Text('Profile'),
+                // Divider(color: Colors.black,height: 5,),
+
+                Card(
+                  color: AppColors.primaryColor,
+                  shadowColor:Colors.black,
+                  elevation: 5,
+                  child: ListTile(
+                    onTap: () {},
+                    leading: Icon(Icons.account_circle_rounded),
+                    title: Text('Profile'),
+                  ),
                 ),
-                ListTile(
-                  onTap: () {},
-                  leading: Icon(Icons.favorite),
-                  title: Text('Favourites'),
+                // Divider(color: Colors.black,height: 5,),
+
+                Card(
+                  color: AppColors.primaryColor,
+                  shadowColor:Colors.black,
+                  elevation: 5,
+                  child: ListTile(
+                    onTap: () {},
+                    leading: Icon(Icons.favorite),
+                    title: Text('Favourites'),
+                  ),
                 ),
-                ListTile(
-                  onTap: () {},
-                  leading: Icon(Icons.settings),
-                  title: Text('Settings'),
+                // Divider(color: Colors.black,height: 5,),
+
+                Card(
+                  color: AppColors.primaryColor,
+                  shadowColor:Colors.black,
+                  elevation: 5,
+                  child: ListTile(
+                    onTap: () {},
+                    leading: Icon(Icons.settings),
+                    title: Text('Settings'),
+                  ),
                 ),
+                // Divider(color: Colors.black,height: 5,),
+
                 Spacer(),
                 DefaultTextStyle(
                   style: TextStyle(

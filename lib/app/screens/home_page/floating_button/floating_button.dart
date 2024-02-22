@@ -1,3 +1,4 @@
+import 'package:al_hadith/app/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 
@@ -9,8 +10,10 @@ class FloatingActionBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SpeedDial(
-      overlayColor: Colors.white,
-      overlayOpacity: 0.3,
+      backgroundColor: AppColors.primaryColor,
+      foregroundColor: AppColors.white,
+      overlayColor: Colors.transparent,
+      overlayOpacity: 0.0,
       animatedIcon: AnimatedIcons.menu_close,
       childrenButtonSize: const Size(50, 50),
       children: [
